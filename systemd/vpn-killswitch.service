@@ -1,0 +1,15 @@
+[Unit]
+Description=Kill-switch iptables (solo salida por VPN)
+After=network-online.target
+Wants=network-online.target
+Before=openvpn-client@lab.service
+
+[Service]
+Type=oneshot
+# Ajusta variables según tu entorno: interfaz de salida y puerto/proto del handshake de OpenVPN
+Environment="WAN_IF=eth0" "VPN_IF=tun0" "HANDSHAKE_PROTO_PORT=udp/80"
+ExecStart=/usr/local/sbin/vpn_killswitch.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
