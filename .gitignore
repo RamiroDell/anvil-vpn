@@ -1,0 +1,8 @@
+# secretos / artefactos sensibles
+*.ovpn
+credentials
+*.key
+*.crt
+*.pem
+*.p12
+*.log
