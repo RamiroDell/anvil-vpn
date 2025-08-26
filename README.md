@@ -85,7 +85,6 @@ curl -s ifconfig.me; echo
 
 ## Buenas prácticas
 - Mantén el *kill‑switch* activo: **sin túnel = sin tráfico**.
-- Evita almacenar `.ovpn` reales y `credentials` en el repositorio.
 - Ajusta `HANDSHAKE_PROTO_PORT` (p. ej. `udp/80`, `tcp/443`) si tu proveedor usa otro puerto/protocolo.
 - Si OpenVPN usa un usuario dedicado, cambia los `--uid-owner` en el script por ese UID.
 
