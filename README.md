@@ -39,7 +39,7 @@ sudo systemctl enable --now vpn-killswitch.service
 # 3) Configura OpenVPN (cliente)
 sudo mkdir -p /etc/openvpn/client
 sudo cp openvpn/example-client.conf /etc/openvpn/client/lab.conf
-# Crea archivo de credenciales (NO subas esto a Git)
+# Crea archivo de credenciales
 echo "USER_OVPN" | sudo tee /etc/openvpn/credentials >/dev/null
 echo "PASS_OVPN" | sudo tee -a /etc/openvpn/credentials >/dev/null
 sudo chmod 600 /etc/openvpn/credentials
